@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout Page</title>
+    <style>
+      body {
+        background: repeating-linear-gradient(
+          -35deg,
+          rgba(53, 3, 71, 0.9) 10%,
+          rgba(21, 109, 182, 0.9) 15%
+        );
+      }
+      .container {
+        display: flex;
+        justify-content: flex-end;
+        align-items: stretch;
+        width: 70%;
+        margin-top: 40px;
+        position: relative;
+        left: 200px;
+        top: 40px;
+      }
+      .picture {
+        background-color: black;
+        width: 32.5%;
+        border-bottom-left-radius: 20px;
+        border-top-left-radius: 20px;
+        overflow-y: hidden;
+        overflow-x: hidden;
+      }
+
+      form {
+        display: flex;
+        width: 53%;
+        flex-direction: column;
+        background-color: white;
+        color: rgb(217, 42, 200);
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        padding-left: 15px;
+        border-bottom-right-radius: 20px;
+        border-top-right-radius: 20px;
+      }
+      label {
+        margin-top: 20px;
+      }
+      input,
+      select,
+      .card-expiry {
+        width: 90%;
+        border-top: none;
+        border-right: none;
+        border-left: none;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        border-color: rgb(239, 236, 238);
+      }
+      .btn {
+        color: white;
+        width: 90%;
+        height: 2vw;
+        margin-top: 30px;
+        border-radius: 15px;
+        background: linear-gradient(
+          90deg,
+          rgba(230, 0, 255, 0.79),
+          rgba(40, 0, 250, 0.8)
+        );
+      }
+      .date {
+        width: 30%;
+        margin-left: 5px;
+      }
+      .cvv {
+        width: 50%;
+        margin-left: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="picture">
+        <img src="Shoephoto.png" alt="photo of a shoe" />
+      </div>
+      <form action="">
+        <h1>Checkout</h1>
+        <h2>Payment Information</h2>
+        <label>Cardholder Name</label>
+        <input type="text" />
+        <label>Card Number</label>
+        <input type="number" />
+        <label>Card Type </label>
+        <select name="cardtype" id="card">
+          <option value="selection" selected>--Select a Card Type--</option>
+          <option value="credit">Credit Card</option>
+          <option value="debit">Debit Card</option>
+          <option value="visa">Visa Card</option>
+        </select>
+
+        <div class="card-expiry">
+          <label for="date"> Expiry </label> <input type="date" class="date" />
+          <label for="cvv">CVV</label> <input type="text" class="cvv" />
+        </div>
+        <button class="btn">CheckOut</button>
+      </form>
+    </div>
+  </body>
+</html>
